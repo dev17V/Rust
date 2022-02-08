@@ -6,7 +6,7 @@ use tokio::io::{AsyncReadExt, AsyncWriteExt};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let listener = TcpListener::bind("127.0.0.1:3333").await?;
+    let listener = TcpListener::bind("localhost:1771").await?;
 
     loop {
         let (mut socket, _) = listener.accept().await?;
